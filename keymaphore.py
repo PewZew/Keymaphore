@@ -57,9 +57,11 @@ def switch(case):
 	else:
 		return '#'
 
-code=input("Nhập mã vào: ")
-group=textwrap.wrap(code, 2)
+while True:
+	output=''
+	code=input("Nhập mã vào: ")
+	group=textwrap.wrap(code, 2)
 
-for i in range(len(group)):
-	output=output+(switch(group[i]))
-print(output)
+	for i in range(len(group)):
+		output=output+(switch(group[i]))
+	print(output)
